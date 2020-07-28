@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>API Frameworks</title>
+        <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Languages</h1>
+        <div class="langs">
+            <div>
+                <h2><u>Lang #1</u></h2>
+                <h3>links :-</h3>
+                <h3>Upvotes: {{ votes }} </h3>
+                <form method="post">
+                    <button type="submit" formaction="/home/upvote_link" name="vote">VOTE UP</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
