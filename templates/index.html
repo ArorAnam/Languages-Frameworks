@@ -6,16 +6,36 @@
         <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
     </head>
     <body>
+
         <h1>Languages</h1>
         <div class="langs">
-            <div>
-                <h2><u>Lang #1</u></h2>
+            <div class="lang1">
+                <h2><u>Lang #1 : {{lang1_name}} </u></h2>
                 <h3>links :-</h3>
-                <h3>Upvotes: {{ votes }} </h3>
-                <form method="post">
-                    <button type="submit" formaction="/home/upvote_link" name="vote">VOTE UP</button>
-                </form>
+
+                <div>
+                    <h3>course depth coverage: {{ votes1 }} </h3>
+                    <form method="post">
+                        <button type="submit" formaction="/home/cdc" name="vote1">VOTE UP</button>
+                    </form>
+                </div>
+
+                <div>
+                    <h3>concepts well explained: {{ votes2 }} </h3>
+                    <form method="post">
+                        <button type="submit" formaction="/home/cwe" name="vote2">VOTE UP</button>
+                    </form>
+                </div>
+
+                <div>
+                    <h3>quality of content: {{ votes3 }} </h3>
+                    <form method="post">
+                        <button type="submit" formaction="/home/qoc" name="vote3">VOTE UP</button>
+                    </form>
+                </div>
+
             </div>
         </div>
+
     </body>
 </html>
